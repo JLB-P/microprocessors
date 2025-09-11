@@ -8,7 +8,7 @@ Copyright (C) 2025 ARM Ltd and ARM Germany GmbH. All rights reserved.
 License Information: José Luis Barbosa|
 University of Mexico
 User-based license: Keil MDK Community (non-commercial free of charge)
-Valid until: May 31 2033. Cached until: Sep 10 2025
+Valid until: May 31 2033. Cached until: Sep 15 2025
  
 Tool Versions:
 Toolchain:       Keil MDK Community (non-commercial free of charge  Version: 5.43.0.0
@@ -24,19 +24,18 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.3.1.0
 Dialog DLL:      TCM.DLL V1.56.6.0
  
 <h2>Project:</h2>
-C:\repo\microprocessors\microprocessors\assembly\l_01\l_01.uvprojx
-Project File Date:  08/31/2025
+C:\repo\stm32f103c8\assembly\l_02\L_02.uvprojx
+Project File Date:  09/08/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.24', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
-Build target 'architecture'
-assembling p_01.s...
+Build target 'alu'
+assembling p_02.s...
 linking...
-.\Objects\l_01.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
-Program Size: Code=544 RO-data=236 RW-data=0 ZI-data=1536  
+.\Objects\L_02.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=504 RO-data=236 RW-data=4 ZI-data=1540  
 Finished: 0 information, 1 warning and 0 error messages.
-FromELF: creating hex file...
-".\Objects\l_01.axf" - 0 Error(s), 1 Warning(s).
+".\Objects\L_02.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -54,7 +53,7 @@ Package Vendor: Keil
 
 <h2>Collection of Component include folders:</h2>
   ./RTE/Device/STM32F103C8
-  ./RTE/_architecture
+  ./RTE/_alu
   C:/Keil_v5/ARM/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include
   C:/Keil_v5/ARM/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
 
@@ -63,11 +62,11 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE@6.1.1
 
    * Component: Keil::Device:Startup@1.0.0
-      Source file:   Device/Source/system_stm32f10x.c
-      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
       Include file:  RTE_Driver/Config/RTE_Device.h
       Source file:   Device/Source/ARM/STM32F1xx_OPT.s
-Build Time Elapsed:  00:00:01
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+      Source file:   Device/Source/system_stm32f10x.c
+Build Time Elapsed:  00:00:00
 </pre>
 </body>
 </html>

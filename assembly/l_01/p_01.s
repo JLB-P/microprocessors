@@ -28,7 +28,7 @@ __main
 	mov r2,#0x55		;carga un valor cualquiera en r2
 	mov r3,#0x11		;carga un valor cualquiera en r3
 	adds r5,r0,#1		;al valor de r0 suma 1 y resultado en r5
-	adc r6,r2,r3		;r6=r2+r3+C(acarreo)
+	adcs r6,r2,r3		;r6=r2+r3+C(acarreo)
 	;registro apuntador a la pila
 	push {r0,r1-r5}		;guarda el contenido de r0 y r1 a r5 en 
 						;la pila de datos a partir de la dirección
