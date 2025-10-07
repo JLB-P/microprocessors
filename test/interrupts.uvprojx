@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>sdk</TargetName>
+      <TargetName>Target_1</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>6240000::V6.24::ARMCLANG</pCCUsed>
@@ -33,8 +33,8 @@
           <SLE66CMisc></SLE66CMisc>
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
-          <SFDFile>C:\Keil_v5\ARM\Packs\Keil\STM32F1xx_DFP\2.4.1\SVD\STM32F103.SFR</SFDFile>
-          <bCustSvd>1</bCustSvd>
+          <SFDFile>$$Device:STM32F103C8$SVD\STM32F103xx.svd</SFDFile>
+          <bCustSvd>0</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
           <IncludePath></IncludePath>
@@ -49,10 +49,10 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>sdk</OutputName>
+          <OutputName>interrupts</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>1</CreateHexFile>
+          <CreateHexFile>0</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\Listings\</ListingPath>
@@ -111,8 +111,8 @@
         <DllOption>
           <SimDllName>SARMCM3.DLL</SimDllName>
           <SimDllArguments> -REMAP</SimDllArguments>
-          <SimDlgDll>DARMSTM.DLL</SimDlgDll>
-          <SimDlgDllArguments>-pSTM32F103C8</SimDlgDllArguments>
+          <SimDlgDll>DCM.DLL</SimDlgDll>
+          <SimDlgDllArguments>-pCM3</SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
           <TargetDllArguments></TargetDllArguments>
           <TargetDlgDll>TCM.DLL</TargetDlgDll>
@@ -134,11 +134,11 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>4096</DriverSelection>
+            <DriverSelection>-1</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3>"" ()</Flash3>
+          <Flash3></Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -382,62 +382,12 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>sources</GroupName>
+          <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
-            </File>
-            <File>
-              <FileName>gpio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\gpio.c</FilePath>
-            </File>
-            <File>
-              <FileName>leds.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\leds.c</FilePath>
-            </File>
-            <File>
-              <FileName>ext_in.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\ext_in.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>includes</GroupName>
-          <Files>
-            <File>
-              <FileName>gpio.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\gpio.h</FilePath>
-            </File>
-            <File>
-              <FileName>leds.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\leds.h</FilePath>
-            </File>
-            <File>
-              <FileName>ext_in.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\ext_in.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>system</GroupName>
-          <Files>
-            <File>
-              <FileName>delay.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\delay.c</FilePath>
-            </File>
-            <File>
-              <FileName>delay.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\delay.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -457,13 +407,13 @@
       <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="6.1.1" condition="ARMv6_7_8-M Device" ymlID="CMSIS:CORE">
         <package name="CMSIS" schemaVersion="1.7.40" url="https://www.keil.com/pack/" vendor="ARM" version="6.2.0"/>
         <targetInfos>
-          <targetInfo name="sdk"/>
+          <targetInfo name="Target_1"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="STM32F1xx CMSIS" ymlID="Device:Startup">
         <package name="STM32F1xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.1"/>
         <targetInfos>
-          <targetInfo name="sdk"/>
+          <targetInfo name="Target_1"/>
         </targetInfos>
       </component>
     </components>
@@ -473,7 +423,7 @@
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="STM32F1xx CMSIS"/>
         <package name="STM32F1xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.1"/>
         <targetInfos>
-          <targetInfo name="sdk"/>
+          <targetInfo name="Target_1"/>
         </targetInfos>
       </file>
       <file attr="config" category="source" condition="STM32F1xx MD ARMCC" name="Device\Source\ARM\startup_stm32f10x_md.s" version="1.0.1">
@@ -481,7 +431,7 @@
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="STM32F1xx CMSIS"/>
         <package name="STM32F1xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.1"/>
         <targetInfos>
-          <targetInfo name="sdk"/>
+          <targetInfo name="Target_1"/>
         </targetInfos>
       </file>
       <file attr="config" category="source" name="Device\Source\system_stm32f10x.c" version="1.0.1">
@@ -489,7 +439,7 @@
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="STM32F1xx CMSIS"/>
         <package name="STM32F1xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.1"/>
         <targetInfos>
-          <targetInfo name="sdk"/>
+          <targetInfo name="Target_1"/>
         </targetInfos>
       </file>
     </files>
