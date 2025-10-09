@@ -9,19 +9,12 @@
 volatile int8_t int0_flag = 0;
 
 void EXTI0_IRQHandler(){
-	EXTI->PR = (1 << 0); //clear pending flag
+	EXTI->PR |= (1 << 0); //clear pending flag
 	int0_flag = 1;
 	led_on_off();
 	}
 
 void init_exti(void){
-	/*delay_init();
-	AFIO->EXTICR 
-	AFIO->EXTICR[1] = 1 << 0;	//selects PB4 for line 4 
-	EXTI->FTSR = (1 << 4);		//interrupt on falling edge
-	EXTI->IMR = (1 << 4);			//enable interrupt EXTI4
-	NVIC_EnableIRQ(EXTI4_IRQn);	//enable interrupt EXTI4*/
-	
 /*Note 1
 	EXTICR is defined as array structure EXTICR[4]
 	so 	EXTICR[0] <=> EXTICR1 in reference manual

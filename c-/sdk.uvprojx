@@ -404,6 +404,11 @@
               <FileType>1</FileType>
               <FilePath>.\ext_in.c</FilePath>
             </File>
+            <File>
+              <FileName>i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\i2c.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -423,6 +428,11 @@
               <FileName>ext_in.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\ext_in.h</FilePath>
+            </File>
+            <File>
+              <FileName>i2c.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\i2c.h</FilePath>
             </File>
           </Files>
         </Group>
