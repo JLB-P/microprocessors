@@ -13,19 +13,27 @@ void init_i2c(void){
 	I2C2->CR1 &= ~(1 << 15);	//release the reset
 	
 	//set Peripheral clock freq
-	I2C2->CR2 = 0x08;	// set f=8Mhz
+	//I2C2->CR2 = 0x08;	// set f=8Mhz
+	I2C2->CR2 = 0x0020;	// set f=32Mhz
 	
 	//Mode (100Khz->400Khz)
-	I2C2->CCR &= ~(1 << 15);	// standard speed mode
-	I2C2->TRISE = 0x09;	//rise time(RM0008 pag 783)
+	//I2C2->CCR &= ~(1 << 15);	// standard speed mode
+	I2C2->CCR = 0x00B4;
 	
-	//enable the peripheral
+	//I2C2->TRISE = 0x09;	//rise time(RM0008 pag 783)
+	I2C2->TRISE = 37;
+	//peripheral enable
 	I2C2->CR1 |= (1 << 0);
 }
 
+void wait_i2c(){
+	while((I2C2->SR2&(1 << 1)) != 0);
+}
+
+//************************
 void start_i2c(void){
 	I2C2->CR1 |= (1 << 8);		// start transmission
-	while(!(I2C2->SR1 & I2C_SR1_SB)); // wait until ready
+	while(!(I2C2->SR1 & (1<<0))); // wait until ready
 }
 
 void stop_i2c(void){

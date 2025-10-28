@@ -8,7 +8,7 @@ void led_on_off(void)
 	GPIOC ->ODR |= 1 << 13;
 	delay_msx(100);
 	GPIOC ->ODR &= ~(1 << 13);
-	delay_msx(100);}
+	delay_msx(200);}
 }
 
 void delay_msx(uint16_t t){

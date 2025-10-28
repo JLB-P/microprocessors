@@ -8,7 +8,7 @@ Copyright (C) 2025 ARM Ltd and ARM Germany GmbH. All rights reserved.
 License Information: Jose Luis Barbosa
 UNAM
 User-based license: Keil MDK Community (non-commercial free of charge)
-Valid until: May 31 2033. Cached until: Nov 2 2025
+Valid until: May 31 2033. Cached until: Nov 3 2025
  
 Tool Versions:
 Toolchain:       Keil MDK Community (non-commercial free of charge  Version: 5.43.0.0
@@ -19,29 +19,21 @@ Linker/Locator:  ArmLink.exe V6.24
 Library Manager: ArmAr.exe V6.24
 Hex Converter:   FromElf.exe V6.24
 CPU DLL:         SARMCM3.DLL V5.43.0.0
-Dialog DLL:      DARMSTM.DLL V1.69.1.0
+Dialog DLL:      DCM.DLL V1.17.5.0
 Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.3.1.0
-Dialog DLL:      DARMSTM.DLL V1.69.1.0
+Dialog DLL:      TCM.DLL V1.56.6.0
  
 <h2>Project:</h2>
-C:\repo\microprocessors\microprocessors\c-\sdk.uvprojx
-Project File Date:  10/08/2025
+C:\repo\stm32f103c8\usart\usart.uvprojx
+Project File Date:  10/27/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.24', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
-Rebuild target 'sdk'
+Build target 'Target_1'
 compiling main.c...
-compiling i2c.c...
-assembling startup_stm32f10x_md.s...
-compiling delay.c...
-compiling ext_in.c...
-compiling gpio.c...
-compiling leds.c...
-compiling system_stm32f10x.c...
 linking...
-Program Size: Code=1560 RO-data=252 RW-data=0 ZI-data=1640  
-FromELF: creating hex file...
-".\Objects\sdk.axf" - 0 Error(s), 0 Warning(s).
+Program Size: Code=1068 RO-data=252 RW-data=0 ZI-data=1632  
+".\Objects\usart.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -59,7 +51,7 @@ Package Vendor: Keil
 
 <h2>Collection of Component include folders:</h2>
   ./RTE/Device/STM32F103C8
-  ./RTE/_sdk
+  ./RTE/_Target_1
   C:/Keil_v5/ARM/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include
   C:/Keil_v5/ARM/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
 
@@ -69,9 +61,9 @@ Package Vendor: Keil
 
    * Component: Keil::Device:Startup@1.0.0
       Source file:   Device/Source/ARM/startup_stm32f10x_md.s
-      Include file:  RTE_Driver/Config/RTE_Device.h
-      Source file:   Device/Source/system_stm32f10x.c
       Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+      Source file:   Device/Source/system_stm32f10x.c
+      Include file:  RTE_Driver/Config/RTE_Device.h
 Build Time Elapsed:  00:00:01
 </pre>
 </body>

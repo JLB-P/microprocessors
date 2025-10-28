@@ -5,6 +5,7 @@
 #define I2C_STDMODE 0xB4
 
 void init_i2c();
+void wait_i2c();
 void start_i2c(void);
 void stop_i2c(void);
 void data_i2c(uint8_t data);
